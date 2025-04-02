@@ -20,11 +20,11 @@ def fb(t):
 
 # 固定 n=4，選擇合理的截斷值
 n = 4
-a_trunc_upper = 20     # for ∞ → 選一個夠大
 b_trunc_lower = 1e-6   # for 0 → 避免除以 0
 
-Ia = composite_simpson(fa, 1, a_trunc_upper, n)
+Ia = composite_simpson(fa, 1, 15, n) 
 Ib = composite_simpson(fb, b_trunc_lower, 1, n)
+
 print()
 print(f"(a) Approximation (n=4) ≈ {Ia:.15f}")
 print()
